@@ -61,20 +61,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin: ${e=>e.$isMobile?"0px":"5px"};
 `,q0=mr.div`
     position: absolute;
-    top: ${e=>e.$active?"-32px":"0px"};
+    top: ${e=>e.$active?"-34px":"0px"};
     transition: 0.3s ease-out;
     color: white;
-    padding: 5px;
+    padding: ${e=>e.$isMobile?"0px":"5px"};
     text-align: center;
     width: 100%;
     background-color: #1c1c1c;
-    z-index: -1;
+    z-index: ${e=>e.$isMobile?"1":"-1"};
+    /* line-height: 45px; */
 `,J0=({video:e,thumbnail:t,title:n})=>{const[r,i]=Mt.useState(!1);return It.jsxs(X0,{$isMobile:Mr,onMouseOver:()=>i(!0),onMouseLeave:()=>i(!1),children:[It.jsx(q0,{$active:Mr||r,children:n}),It.jsx(Z0,{$isMobile:Mr,src:e,poster:t,controls:Mr||r})]})},ey=mr.div`
 	display: flex;
 	flex: auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: ${e=>e.$isMobile?"0px":"25px"};
+    padding: ${e=>e.$isMobile?"25px 0px":"25px"};
 `,ty=()=>{const[e,t]=Mt.useState();return Mt.useEffect(()=>{t(zg.videos)},[t]),It.jsx(ey,{$isMobile:Mr,children:e&&e.map(n=>It.jsx(J0,{title:n.title,video:"/portfolio/"+n.video,thumbnail:"/portfolio/"+n.thumbnail},n.id))})},ny=mr.div`
 	display: flex;
 	width: 100vw;
