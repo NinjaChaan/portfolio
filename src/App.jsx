@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
-import seathVid from '/seathbomb2.webm'
-import seathThumb from '/seathThumb.png'
 import videosjson from './assets/videos.json'
 import styled from 'styled-components'
 import VideoCard from './VideoCard'
-import axios from 'axios'
 
 const VideoList = styled.div`
 	display: flex;
@@ -25,13 +22,6 @@ function App() {
 	return (
 		<>
 			<VideoList>
-			{/* <VideoCard
-					key={0}
-					title={"Seath Bomb"}
-					video={seathVid}
-					thumbnail={seathThumb}
-				>
-				</VideoCard > */}
 			{videos && videos.map((video) => (
 				<VideoCard
 					key={video.id}
@@ -41,8 +31,6 @@ function App() {
 				>
 				</VideoCard >
 			))}
-			{/* <VideoCard video={seathVid} thumbnail={seathThumb}></VideoCard>
-			<VideoCard video={seathVid} thumbnail={seathThumb}></VideoCard> */}
 		</VideoList>
 		</>
 	)

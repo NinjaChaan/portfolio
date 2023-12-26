@@ -6,6 +6,14 @@
             "video": "/seathbomb2.webm",
             "thumbnail": "/seathThumb.png",
             "date": 1703589895118
+        },
+        
+        {
+            "id": 1,
+            "title": "Seath Bomb2",
+            "video": "/seathbomb2.webm",
+            "thumbnail": "/seathThumb.png",
+            "date": 1703589895118
         }
     ]
 }
