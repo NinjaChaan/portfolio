@@ -12,7 +12,7 @@ const VideoContainer = styled.div`
     max-height: 370px;
     width: 100%;
     height: ${(props) => (props.$isMobile ? 'auto' : '100%')};
-    min-height: 200px;
+    min-height: 300px;
     background-color: #1c1c1c;
     
 `
