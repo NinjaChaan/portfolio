@@ -35,7 +35,14 @@ function App() {
 	return (
 		<>
 			<VideoList>
-			{videos && videos.map((video) => (
+			<VideoCard
+					key={0}
+					title={"Seath Bomb"}
+					video={seathVid}
+					thumbnail={seathThumb}
+				>
+				</VideoCard >
+			{/* {videos && videos.map((video) => (
 				<VideoCard
 					key={video.id}
 					title={video.title}
@@ -43,7 +50,7 @@ function App() {
 					thumbnail={video.thumbnail}
 				>
 				</VideoCard >
-			))}
+			))} */}
 			{/* <VideoCard video={seathVid} thumbnail={seathThumb}></VideoCard>
 			<VideoCard video={seathVid} thumbnail={seathThumb}></VideoCard> */}
 		</VideoList>
