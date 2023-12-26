@@ -3,36 +3,40 @@ import styled, { css } from 'styled-components'
 
 const VideoContainer = styled.div`
     position: relative;
-    margin: 10px;
-    flex-direction: vertical;
-    width: 480px;
-    height: 360px;
-    overflow: hidden;
+    margin: 15px;
+    width: 490px;
+    height: 370px;    
+    background-color: #1c1c1c;
+    
 `
 
 const Video = styled.video`
+    position: absolute;
     height: 360px;
     width: 480px;
+    margin: 5px;
 `
 
 const Title = styled.div`
     position: absolute;
-    top: ${(props) => (props.$active ? '0px' : '-35px')};
+    top: ${(props) => (props.$active ? '-32px' : '0px')};
+    transition: 0.3s ease-out;
     color: white;
-    background-color: #0000004c;
     padding: 5px;
     text-align: center;
-    transition: 0.3s ease-out;
     width: 100%;
+    background-color: #1c1c1c;
+    z-index: -1;
 `
 
 const VideoCard = ({ video, thumbnail, title }) => {
     const [hovered, setHovered] = useState(false)
+    const [clicked, setClicked] = useState(false)
 
     return (
-        <VideoContainer>
-            <Title $active={hovered}>{title}</Title>
-            <Video src={video} poster={thumbnail} controls={hovered} onMouseOver={() => setHovered(true)} onMouseLeave={() => setHovered(false)}></Video>
+        <VideoContainer onMouseOver={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+            <Title $active={(hovered || clicked)} >{title}</Title>
+            <Video src={video} poster={thumbnail} controls={hovered} onClick={() => setClicked(true)}></Video>
         </VideoContainer>
     )
 }
