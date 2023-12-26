@@ -3,8 +3,8 @@ import VideoList from './VideoList'
 
 const Contents = styled.div`
 	display: flex;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 `
 
 function App() {

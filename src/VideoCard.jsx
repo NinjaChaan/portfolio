@@ -1,20 +1,29 @@
 import { useState } from 'react'
 import styled, { css } from 'styled-components'
+import {isMobile} from 'react-device-detect'
 
 const VideoContainer = styled.div`
     position: relative;
-    margin: 15px;
-    width: 490px;
-    height: 370px;    
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: ${(props) => (props.$isMobile ? '5px' : '25px')};
+    margin-right: ${(props) => (props.$isMobile ? '5px' : '25px')};
+    max-width: 490px;
+    max-height: 370px;
+    width: 100%;
+    height: ${(props) => (props.$isMobile ? 'auto' : '100%')};
+    min-height: 200px;
     background-color: #1c1c1c;
     
 `
 
 const Video = styled.video`
     position: absolute;
-    height: 360px;
-    width: 480px;
-    margin: 5px;
+    max-height: 360px;
+    max-width: 480px;
+    height: 100%;
+    width: 100%;
+    margin: ${(props) => (props.$isMobile ? '0px' : '5px')};
 `
 
 const Title = styled.div`
@@ -31,12 +40,11 @@ const Title = styled.div`
 
 const VideoCard = ({ video, thumbnail, title }) => {
     const [hovered, setHovered] = useState(false)
-    const [clicked, setClicked] = useState(false)
 
     return (
-        <VideoContainer onMouseOver={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-            <Title $active={(hovered || clicked)} >{title}</Title>
-            <Video src={video} poster={thumbnail} controls={hovered} onClick={() => setClicked(true)}></Video>
+        <VideoContainer $isMobile={isMobile} onMouseOver={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+            <Title $active={(isMobile || hovered)} >{title}</Title>
+            <Video $isMobile={isMobile} src={video} poster={thumbnail} controls={(isMobile || hovered)}></Video>
         </VideoContainer>
     )
 }

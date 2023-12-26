@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import videosjson from './assets/videos.json'
 import VideoCard from './VideoCard'
+import {isMobile} from 'react-device-detect'
 
 const VideoListContainer = styled.div`
 	display: flex;
 	flex: auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 25px;
+    padding: ${(props) => (props.$isMobile ? '0px' : '25px')};
 `
 
 const VideoList = () => {
@@ -20,7 +21,7 @@ const VideoList = () => {
     }, [setVideos])
 
     return (
-        <VideoListContainer>
+        <VideoListContainer $isMobile={isMobile}>
             {videos && videos.map((video) => (
                 <VideoCard
                     key={video.id}
