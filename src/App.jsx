@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import seathVid from './assets/seathbomb2.webm'
-import seathThumb from './assets/seathThumb.png'
+import seathVid from '/seathbomb2.webm'
+import seathThumb from '/seathThumb.png'
 import videosjson from './assets/videos.json'
 import styled from 'styled-components'
 import VideoCard from './VideoCard'
