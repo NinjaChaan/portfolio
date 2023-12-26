@@ -1,0 +1,11 @@
+{
+    "videos":  [
+        {
+            "id": 0,
+            "title": "Seath Bomb",
+            "video": "/portfolio/src/assets/seathbomb2.webm",
+            "thumbnail": "/portfolio/src/assets/seathThumb.png",
+            "date": 1703589895118
+        }
+    ]
+}
