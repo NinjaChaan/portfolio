@@ -49,7 +49,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     max-height: 370px;
     width: 100%;
     height: ${e=>e.$isMobile?"auto":"100%"};
-    min-height: 200px;
+    min-height: 300px;
     background-color: #1c1c1c;
     
 `,Z0=mr.video`
