@@ -3,8 +3,8 @@
         {
             "id": 0,
             "title": "Seath Bomb",
-            "video": "/assets/seathbomb2.webm",
-            "thumbnail": "/assets/seathThumb.png",
+            "video": "/seathbomb2.webm",
+            "thumbnail": "/seathThumb.png",
             "date": 1703589895118
         }
     ]

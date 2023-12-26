@@ -16,16 +16,6 @@ const VideoList = styled.div`
 function App() {
 	const [videos, setVideos] = useState()
 
-	// useEffect(() => {
-	// 	axios.get('http://localhost:1337/api/videos?populate=*', {
-	// 		headers: {
-	// 			'Authorization': 'Bearer 62b870bf3236b0e17cee3ff03395c4594f8486cbdb70320953012f85c7882b76b05d9dba765c4ad33f10a0810660e970fb0c01d7b7401ecaa14ddcd8a7857a68e37058470d2768ac28798730436943acc8bb50439edbd8cfbd4968bce275af067d7c6d67613db2479bba4664e22501df474184f3ab3c318c95ddf055c95dcc61'
-	// 		}
-	// 	})
-	// 		.then((res) => { console.log(res.data.data); setVideos(res.data.data) })
-	// 		.catch((err) => console.error(err))
-
-	// }, [setVideos])
 	useEffect(() => {
 		setVideos(videosjson.videos)
 
@@ -35,22 +25,22 @@ function App() {
 	return (
 		<>
 			<VideoList>
-			<VideoCard
+			{/* <VideoCard
 					key={0}
 					title={"Seath Bomb"}
 					video={seathVid}
 					thumbnail={seathThumb}
 				>
-				</VideoCard >
-			{/* {videos && videos.map((video) => (
+				</VideoCard > */}
+			{videos && videos.map((video) => (
 				<VideoCard
 					key={video.id}
 					title={video.title}
-					video={video.video}
-					thumbnail={video.thumbnail}
+					video={'/portfolio/' + video.video}
+					thumbnail={'/portfolio/' + video.thumbnail}
 				>
 				</VideoCard >
-			))} */}
+			))}
 			{/* <VideoCard video={seathVid} thumbnail={seathThumb}></VideoCard>
 			<VideoCard video={seathVid} thumbnail={seathThumb}></VideoCard> */}
 		</VideoList>
