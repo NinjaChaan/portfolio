@@ -79,5 +79,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	background-color: #202020;
 `;function ry(){return It.jsx(ny,{children:It.jsx(ty,{})})}Ll.createRoot(document.getElementById("root")).render(It.jsx(Zn.StrictMode,{children:It.jsx(ry,{})}));
