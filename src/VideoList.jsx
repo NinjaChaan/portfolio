@@ -9,7 +9,7 @@ const VideoListContainer = styled.div`
 	flex: auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: ${(props) => (props.$isMobile ? '0px' : '25px')};
+    padding: ${(props) => (props.$isMobile ? '25px 0px' : '25px')};
 `
 
 const VideoList = () => {
@@ -17,8 +17,8 @@ const VideoList = () => {
 
     useEffect(() => {
         setVideos(videosjson.videos)
-
-    }, [setVideos])
+        console.log("get videos");
+    }, [])
 
     return (
         <VideoListContainer $isMobile={isMobile}>
@@ -26,8 +26,8 @@ const VideoList = () => {
                 <VideoCard
                     key={video.id}
                     title={video.title}
-                    video={'/portfolio/' + video.video}
-                    thumbnail={'/portfolio/' + video.thumbnail}
+                    video={video.video}
+                    loop={video.loop === 1 ? true : false}
                 >
                 </VideoCard >
             ))}
