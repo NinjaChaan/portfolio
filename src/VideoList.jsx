@@ -5,11 +5,12 @@ import VideoCard from './VideoCard'
 import {isMobile} from 'react-device-detect'
 
 const VideoListContainer = styled.div`
-	display: flex;
-	flex: auto;
-    flex-wrap: wrap;
+	display: grid;
+    grid-row-gap: 50px;
+    grid-template-columns: ${(props) => (props.$isMobile ? '90%' : '40% 40%')};
     justify-content: space-evenly;
     padding: ${(props) => (props.$isMobile ? '0px' : '25px')};
+    width: 100%;
 `
 
 const VideoList = () => {
