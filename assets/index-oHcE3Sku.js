@@ -47,7 +47,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin-right: ${e=>e.$isMobile?"0px":"25px"};
     width: 100%;
     height: ${e=>e.$isMobile?"fit-content":"100%"};
-    min-height: ${e=>e.$isMobile?"0":"500px"};
+    min-height: ${e=>e.$isMobile?"300px":"500px"};
     max-height: 500px;
     background-color: #1c1c1c;
     flex: ${e=>e.$isMobile?"100%":"40%"};
@@ -64,6 +64,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin: ${e=>e.$isMobile?"0px":"5px"};
     padding: ${e=>e.$isMobile?"10px 0px 5px 0":"0"};
     position: ${e=>e.$isMobile?"":"absolute"};
+    align-self: center;
 `,q0=un.div`
     position: ${e=>e.$isMobile?"initial":"absolute"};
     top: ${e=>e.$active?"-32px":"5px"};
@@ -82,7 +83,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     flex-direction: column;
     grid-row-gap: 50px;
     grid-template-columns: ${e=>e.$isMobile?"":"40% 40%"};
-    justify-content: space-evenly;
+    justify-content: ${e=>e.$isMobile?"":"space-evenly"};
     padding: ${e=>e.$isMobile?"0px":"25px"};
     width: 100%;
 `,ry=()=>{const[e,t]=zt.useState();return zt.useEffect(()=>{t(Mg.videos)},[t]),ut.jsx(ny,{$isMobile:zn,children:e&&e.map(n=>ut.jsx(ty,{title:n.title,video:"/portfolio/"+n.video,thumbnail:"/portfolio/"+n.thumbnail,description:n.description},n.id))})},iy=un.div`
