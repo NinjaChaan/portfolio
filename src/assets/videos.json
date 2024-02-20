@@ -12,24 +12,16 @@
             "id": 1,
             "title": "Arcane Explosion",
             "description": "A magical explosion effect",
-            "video": "/ArcaneExplosion_Olive2.mp4",
-            "thumbnail": "/ArcaneExplosion.png",
-            "date": 1703589895118
-        },
-        {
-            "id": 2,
-            "title": "Arcane Explosion (improved)",
-            "description": "A magical explosion effect (fixed & improved)",
             "video": "/ArcaneExplosionFixed.mp4",
             "thumbnail": "/ArcaneExplosionFixed.png",
             "date": 1703589895118
         },
         {
-            "id": 3,
-            "title": "Elemental Sword",
-            "description": "Fire and Electric weapon effects",
-            "video": "/ElementalSword.mp4",
-            "thumbnail": "/ElementalSword.png",
+            "id": 2,
+            "title": "Atomic Sewage",
+            "description": "A scene showcasing splash effects and shaders for (toxic) water and a bulging pipe",
+            "video": "/AtomicSewage.mp4",
+            "thumbnail": "/AtomicSewage.png",
             "date": 1703589895118
         }
     ]
