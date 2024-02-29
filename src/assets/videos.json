@@ -3,7 +3,7 @@
         {
             "id": 0,
             "title": "Portal Room",
-            "description": "A scene showcasing effects for a portal, torches and fog",
+            "description": "Portal, torch and fog effects",
             "video": "/PortalRoom.mp4",
             "thumbnail": "/PortalRoomThumb.png",
             "date": 1703589895118
@@ -18,10 +18,18 @@
         },
         {
             "id": 2,
-            "title": "Atomic Sewage",
-            "description": "A scene showcasing splash effects and shaders for (toxic) water and a bulging pipe",
-            "video": "/AtomicSewage.mp4",
-            "thumbnail": "/AtomicSewage.png",
+            "title": "Elemental Sword",
+            "description": "Fire and electric weapon, blood and hit effects",
+            "video": "/ElementalSword.mp4",
+            "thumbnail": "/ElementalSword.png",
+            "date": 1703589895118
+        },
+        {
+            "id": 3,
+            "title": "Toxic Sewage",
+            "description": "Bulging pipe, toxic water and splash effects",
+            "video": "/Toxic.mp4",
+            "thumbnail": "/Toxic.png",
             "date": 1703589895118
         }
     ]
